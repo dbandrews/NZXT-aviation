@@ -29,13 +29,13 @@ const RadialGauge = React.memo((props) => {
         dataLabels: {
           name: {
             fontSize: "2rem",
-            color: "white",
+            color: "#00ffff",
             offsetY: -48,
           },
           value: {
             offsetY: 0,
             fontSize: "4rem",
-            color: "white",
+            color: "#ff71ce",
             formatter: function (val) {
               return val + "°C";
             },
@@ -46,7 +46,7 @@ const RadialGauge = React.memo((props) => {
         },
         track: {
           show: true,
-          background: "#f2f2f2",
+          background: "#2d1b4e",
           strokeWidth: "20%",
           opacity: 1,
           margin: 15,
@@ -57,11 +57,11 @@ const RadialGauge = React.memo((props) => {
       colors: [
         function ({ value }) {
           if (value < 60) {
-            return "#00FF00";
+            return "#00ffff";
           } else if (value >= 60 && value < 80) {
-            return "#FFA500";
+            return "#ff00ff";
           } else {
-            return "#FF0000";
+            return "#ff71ce";
           }
         },
       ],

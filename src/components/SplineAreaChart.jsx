@@ -29,6 +29,17 @@ const SplineAreaChart = React.memo((props) => {
     stroke: {
       curve: "straight",
       width: 2,
+      colors: ["#00ffff", "#ff71ce"],
+    },
+    fill: {
+      type: "gradient",
+      gradient: {
+        shadeIntensity: 1,
+        inverseColors: false,
+        opacityFrom: 0.5,
+        opacityTo: 0.1,
+      },
+      colors: ["#00ffff", "#ff71ce"],
     },
     title: {
       text: "POWER (W)",
@@ -37,6 +48,7 @@ const SplineAreaChart = React.memo((props) => {
       style: {
         fontSize: "1.2rem",
         fontWeight: "bold",
+        color: "#b967ff"
       },
     },
     legend: {
@@ -44,6 +56,9 @@ const SplineAreaChart = React.memo((props) => {
       offsetY: 10,
       fontSize: "25rem",
       floating: true,
+      labels: {
+        colors: ["#00ffff", "#ff71ce"]
+      }
     },
     grid: {
       show: false,

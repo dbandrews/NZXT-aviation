@@ -40,7 +40,7 @@ const BarGauge = React.memo((props) => {
     },
     grid: {
       row: {
-        colors: ["#e5e5e5", "transparent"],
+        colors: ["#2d1b4e", "transparent"],
         opacity: 0.2,
       },
       xaxis: {
@@ -62,11 +62,11 @@ const BarGauge = React.memo((props) => {
       colors: [
         function ({ value }) {
           if (value < 60) {
-            return "#00FF00";
+            return "#00ffff";
           } else if (value >= 60 && value < 80) {
-            return "#FFA500";
+            return "#ff00ff";
           } else {
-            return "#FF0000";
+            return "#ff71ce";
           }
         },
       ],
@@ -100,6 +100,7 @@ const BarGauge = React.memo((props) => {
           style={{
             fontSize: "1.5rem",
             margin: "0",
+            color: "#b967ff",
           }}
         >
           {props?.label || "No Label"}
@@ -118,6 +119,7 @@ const BarGauge = React.memo((props) => {
             display: "block",
             width: "40px",
             marginTop: "-0.7rem",
+            color: "#00ffff",
           }}
         >
           {props?.data || "0"}
@@ -126,6 +128,7 @@ const BarGauge = React.memo((props) => {
           style={{
             marginTop: "-0.5rem",
             fontSize: "1.1rem",
+            color: "#ff71ce",
           }}
         >
           %

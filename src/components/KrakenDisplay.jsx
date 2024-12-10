@@ -25,6 +25,7 @@ const LiquidContainer = styled.div`
   position: absolute;
   width: 112px;
   left: 264px;
+  color: #00ffff;
 `;
 
 const RadialGaugeContainer = styled.div`
@@ -70,8 +71,13 @@ const BottomItem = styled.div`
 
 const BottomItemLabel = styled.p`
   font-size: 1.1rem;
+  color: #b967ff;
   text-align: ${({ index, arrayLength }) =>
     index === 0 ? "right" : index === arrayLength - 1 ? "left" : "center"};
+`;
+
+const BottomValue = styled.p`
+  color: #ff71ce;
 `;
 
 // eslint-disable-next-line react/display-name
@@ -119,7 +125,7 @@ const KrakenDisplay = React.memo(() => {
               <BottomItemLabel index={index} arrayLength={array.length}>
                 {item.label}
               </BottomItemLabel>
-              <p>{item.value}</p>
+              <BottomValue>{item.value}</BottomValue>
               <BottomItemLabel index={index} arrayLength={array.length}>
                 {item.unit}
               </BottomItemLabel>
